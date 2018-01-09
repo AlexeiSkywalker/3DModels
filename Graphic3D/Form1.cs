@@ -37,7 +37,7 @@ namespace Graphic3D
             Graphics graphics = Graphics.FromImage(pictureBox1.Image);
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             DrawAxises();
-                current.Draw(graphics, Transformations.AxonometricProjection1());
+            current.Draw(graphics, Transformations.AxonometricProjection1());
             
         }
 
@@ -121,6 +121,11 @@ namespace Graphic3D
             Serialize(current, dialog.FileName);
             MessageBox.Show("Файл сохранён");
         }
+        private static double F(double x, double y)
+        {
+            double r = x * x + y * y;
+            return Math.Sin(r)/(r + 1);//Math.Cos(r) / (r + 1);
+        }
 
         private void drawBbutton_Click(object sender, EventArgs e)
         {
@@ -128,6 +133,13 @@ namespace Graphic3D
                 current = new Cube(150);
             else if (texturedCubeRadioButton.Checked)
                 current = new TexturedCube(150, Image.FromFile("../../brickwork-texture.jpg"));
+            else if (plotRadioButton.Checked)
+            {
+                current = new Plot(-0.8, 0.8, 0.1, -0.8, 0.8, 0.1, F);
+                current.ApplyTransformation(Transformations.Scale(300, 300, 300));
+                current.ApplyTransformation(Transformations.RotateX(ToRadians(180)));
+                current.ApplyTransformation(Plot.multiply(Transformations.RotateX(ToRadians(-20)), Transformations.RotateZ(ToRadians(-20))));
+            }
             Redraw();
         }
     }

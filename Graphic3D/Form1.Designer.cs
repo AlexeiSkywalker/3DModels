@@ -99,7 +99,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown6, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown5, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown4, 1, 1);
@@ -134,7 +134,7 @@
             0,
             -2147483648});
             this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown6.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown6.TabIndex = 25;
             // 
             // numericUpDown5
@@ -146,7 +146,7 @@
             0,
             -2147483648});
             this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown5.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown5.TabIndex = 24;
             // 
             // numericUpDown4
@@ -158,7 +158,7 @@
             0,
             -2147483648});
             this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown4.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown4.TabIndex = 23;
             // 
             // numericUpDown9
@@ -170,7 +170,7 @@
             0,
             -2147483648});
             this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown9.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown9.TabIndex = 22;
             // 
             // numericUpDown8
@@ -182,7 +182,7 @@
             0,
             -2147483648});
             this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown8.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown8.TabIndex = 21;
             // 
             // numericUpDown7
@@ -194,7 +194,7 @@
             0,
             -2147483648});
             this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown7.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown7.TabIndex = 20;
             // 
             // numericUpDown3
@@ -207,7 +207,7 @@
             65536});
             this.numericUpDown3.Location = new System.Drawing.Point(307, 4);
             this.numericUpDown3.Maximum = new decimal(new int[] {
-            3,
+            300,
             0,
             0,
             0});
@@ -217,7 +217,7 @@
             0,
             65536});
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown3.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown3.TabIndex = 16;
             this.numericUpDown3.Value = new decimal(new int[] {
             1,
@@ -235,7 +235,7 @@
             65536});
             this.numericUpDown2.Location = new System.Drawing.Point(206, 4);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            3,
+            300,
             0,
             0,
             0});
@@ -245,7 +245,7 @@
             0,
             65536});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown2.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown2.TabIndex = 15;
             this.numericUpDown2.Value = new decimal(new int[] {
             1,
@@ -258,7 +258,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(4, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Поворот";
             // 
@@ -267,7 +267,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(4, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 17);
+            this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Сдвиг";
             // 
@@ -281,7 +281,7 @@
             65536});
             this.numericUpDown1.Location = new System.Drawing.Point(105, 4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            3,
+            300,
             0,
             0,
             0});
@@ -291,7 +291,7 @@
             0,
             65536});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown1.Size = new System.Drawing.Size(94, 24);
             this.numericUpDown1.TabIndex = 3;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -334,7 +334,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 17);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Масштаб";
             // 
@@ -400,7 +400,7 @@
             this.plotRadioButton.AutoSize = true;
             this.plotRadioButton.Location = new System.Drawing.Point(6, 106);
             this.plotRadioButton.Name = "plotRadioButton";
-            this.plotRadioButton.Size = new System.Drawing.Size(137, 21);
+            this.plotRadioButton.Size = new System.Drawing.Size(135, 20);
             this.plotRadioButton.TabIndex = 3;
             this.plotRadioButton.Text = "График функции";
             this.plotRadioButton.UseVisualStyleBackColor = true;
@@ -410,7 +410,7 @@
             this.lightenCubeRadioButton.AutoSize = true;
             this.lightenCubeRadioButton.Location = new System.Drawing.Point(6, 79);
             this.lightenCubeRadioButton.Name = "lightenCubeRadioButton";
-            this.lightenCubeRadioButton.Size = new System.Drawing.Size(152, 21);
+            this.lightenCubeRadioButton.Size = new System.Drawing.Size(147, 20);
             this.lightenCubeRadioButton.TabIndex = 2;
             this.lightenCubeRadioButton.Text = "Куб с освещением";
             this.lightenCubeRadioButton.UseVisualStyleBackColor = true;
@@ -420,7 +420,7 @@
             this.texturedCubeRadioButton.AutoSize = true;
             this.texturedCubeRadioButton.Location = new System.Drawing.Point(6, 52);
             this.texturedCubeRadioButton.Name = "texturedCubeRadioButton";
-            this.texturedCubeRadioButton.Size = new System.Drawing.Size(135, 21);
+            this.texturedCubeRadioButton.Size = new System.Drawing.Size(130, 20);
             this.texturedCubeRadioButton.TabIndex = 1;
             this.texturedCubeRadioButton.Text = "Куб с текстурой";
             this.texturedCubeRadioButton.UseVisualStyleBackColor = true;
@@ -431,7 +431,7 @@
             this.simpleCubeRadioButton.Checked = true;
             this.simpleCubeRadioButton.Location = new System.Drawing.Point(6, 25);
             this.simpleCubeRadioButton.Name = "simpleCubeRadioButton";
-            this.simpleCubeRadioButton.Size = new System.Drawing.Size(110, 21);
+            this.simpleCubeRadioButton.Size = new System.Drawing.Size(106, 20);
             this.simpleCubeRadioButton.TabIndex = 0;
             this.simpleCubeRadioButton.TabStop = true;
             this.simpleCubeRadioButton.Text = "Простой куб";
