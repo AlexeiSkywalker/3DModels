@@ -14,20 +14,19 @@ namespace Graphic3D
 {
     public partial class Form1 : Form
     {
-        List<Model> currentModels;
+
+        Model current;
         
         public Form1()
         {
             InitializeComponent();
-            currentModels = new List<Model>();
-            currentModels.Add(new TexturedCube(150, Image.FromFile("../../brickwork-texture.jpg")));
+            current = new Cube(150);
             Redraw();         
         }
 
         private void scaleButton_Click(object sender, EventArgs e)
         {
-            foreach (var model in currentModels)
-                model.ApplyTransformation(Transformations.Scale((double)numericUpDown1.Value,
+                current.ApplyTransformation(Transformations.Scale((double)numericUpDown1.Value,
                                             (double)numericUpDown2.Value, (double)numericUpDown3.Value));
             Redraw();
         }
@@ -38,26 +37,23 @@ namespace Graphic3D
             Graphics graphics = Graphics.FromImage(pictureBox1.Image);
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             DrawAxises();
-            foreach (var model in currentModels)
-                model.Draw(graphics, Transformations.AxonometricProjection1());
+                current.Draw(graphics, Transformations.AxonometricProjection1());
             
         }
 
         private void rotateButton_Click(object sender, EventArgs e)
         {
-            foreach (var model in currentModels)
-            {
-                model.ApplyTransformation(Transformations.RotateX(ToRadians((double)numericUpDown4.Value)));
-                model.ApplyTransformation(Transformations.RotateY(ToRadians((double)numericUpDown5.Value)));
-                model.ApplyTransformation(Transformations.RotateZ(ToRadians((double)numericUpDown6.Value)));
-            }
+
+            current.ApplyTransformation(Transformations.RotateX(ToRadians((double)numericUpDown4.Value)));
+            current.ApplyTransformation(Transformations.RotateY(ToRadians((double)numericUpDown5.Value)));
+            current.ApplyTransformation(Transformations.RotateZ(ToRadians((double)numericUpDown6.Value)));
+
             Redraw();
         }
 
         private void translateButton_Click(object sender, EventArgs e)
         {
-            foreach (var model in currentModels)
-                model.ApplyTransformation(Transformations.Translate((double)numericUpDown7.Value,
+                current.ApplyTransformation(Transformations.Translate((double)numericUpDown7.Value,
                                             (double)numericUpDown8.Value, (double)numericUpDown9.Value));
             Redraw();
         }
@@ -107,8 +103,7 @@ namespace Graphic3D
             };
             if (dialog.ShowDialog() != DialogResult.OK)
                 return;
-            currentModels.Clear();
-            currentModels.Add(Deserialize(dialog.FileName));
+            current = Deserialize(dialog.FileName);
             Redraw();
 
         }
@@ -123,8 +118,17 @@ namespace Graphic3D
             };
             if (dialog.ShowDialog() != DialogResult.OK)
                 return;
-            Serialize(currentModels[0], dialog.FileName);
+            Serialize(current, dialog.FileName);
             MessageBox.Show("Файл сохранён");
+        }
+
+        private void drawBbutton_Click(object sender, EventArgs e)
+        {
+            if (simpleCubeRadioButton.Checked)
+                current = new Cube(150);
+            else if (texturedCubeRadioButton.Checked)
+                current = new TexturedCube(150, Image.FromFile("../../brickwork-texture.jpg"));
+            Redraw();
         }
     }
 }

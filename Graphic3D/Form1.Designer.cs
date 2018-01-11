@@ -31,6 +31,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
@@ -43,25 +46,29 @@
             this.rotateButton = new System.Windows.Forms.Button();
             this.translateButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.importButton = new System.Windows.Forms.Button();
             this.exportButton = new System.Windows.Forms.Button();
+            this.importButton = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.drawBbutton = new System.Windows.Forms.Button();
+            this.plotRadioButton = new System.Windows.Forms.RadioButton();
+            this.lightenCubeRadioButton = new System.Windows.Forms.RadioButton();
+            this.texturedCubeRadioButton = new System.Windows.Forms.RadioButton();
+            this.simpleCubeRadioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -92,7 +99,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown6, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown5, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown4, 1, 1);
@@ -117,6 +124,42 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(519, 109);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(307, 40);
+            this.numericUpDown6.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown6.TabIndex = 25;
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(206, 40);
+            this.numericUpDown5.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown5.TabIndex = 24;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(105, 40);
+            this.numericUpDown4.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(94, 26);
+            this.numericUpDown4.TabIndex = 23;
             // 
             // numericUpDown9
             // 
@@ -295,42 +338,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Масштаб";
             // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(105, 40);
-            this.numericUpDown4.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(94, 26);
-            this.numericUpDown4.TabIndex = 23;
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(206, 40);
-            this.numericUpDown5.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(94, 26);
-            this.numericUpDown5.TabIndex = 24;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.Location = new System.Drawing.Point(307, 40);
-            this.numericUpDown6.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(94, 26);
-            this.numericUpDown6.TabIndex = 25;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.exportButton);
@@ -343,16 +350,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Импорт и экспотр";
             // 
-            // importButton
-            // 
-            this.importButton.Location = new System.Drawing.Point(6, 25);
-            this.importButton.Name = "importButton";
-            this.importButton.Size = new System.Drawing.Size(250, 30);
-            this.importButton.TabIndex = 0;
-            this.importButton.Text = "Импортировать из файла";
-            this.importButton.UseVisualStyleBackColor = true;
-            this.importButton.Click += new System.EventHandler(this.importButton_Click);
-            // 
             // exportButton
             // 
             this.exportButton.Location = new System.Drawing.Point(6, 61);
@@ -363,11 +360,89 @@
             this.exportButton.UseVisualStyleBackColor = true;
             this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
             // 
+            // importButton
+            // 
+            this.importButton.Location = new System.Drawing.Point(6, 25);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(250, 30);
+            this.importButton.TabIndex = 0;
+            this.importButton.Text = "Импортировать из файла";
+            this.importButton.UseVisualStyleBackColor = true;
+            this.importButton.Click += new System.EventHandler(this.importButton_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.drawBbutton);
+            this.groupBox3.Controls.Add(this.plotRadioButton);
+            this.groupBox3.Controls.Add(this.lightenCubeRadioButton);
+            this.groupBox3.Controls.Add(this.texturedCubeRadioButton);
+            this.groupBox3.Controls.Add(this.simpleCubeRadioButton);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.Location = new System.Drawing.Point(618, 269);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(180, 176);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Выбор фигуры";
+            // 
+            // drawBbutton
+            // 
+            this.drawBbutton.Location = new System.Drawing.Point(6, 133);
+            this.drawBbutton.Name = "drawBbutton";
+            this.drawBbutton.Size = new System.Drawing.Size(137, 25);
+            this.drawBbutton.TabIndex = 4;
+            this.drawBbutton.Text = "Нарисовать";
+            this.drawBbutton.UseVisualStyleBackColor = true;
+            this.drawBbutton.Click += new System.EventHandler(this.drawBbutton_Click);
+            // 
+            // plotRadioButton
+            // 
+            this.plotRadioButton.AutoSize = true;
+            this.plotRadioButton.Location = new System.Drawing.Point(6, 106);
+            this.plotRadioButton.Name = "plotRadioButton";
+            this.plotRadioButton.Size = new System.Drawing.Size(137, 21);
+            this.plotRadioButton.TabIndex = 3;
+            this.plotRadioButton.Text = "График функции";
+            this.plotRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // lightenCubeRadioButton
+            // 
+            this.lightenCubeRadioButton.AutoSize = true;
+            this.lightenCubeRadioButton.Location = new System.Drawing.Point(6, 79);
+            this.lightenCubeRadioButton.Name = "lightenCubeRadioButton";
+            this.lightenCubeRadioButton.Size = new System.Drawing.Size(152, 21);
+            this.lightenCubeRadioButton.TabIndex = 2;
+            this.lightenCubeRadioButton.Text = "Куб с освещением";
+            this.lightenCubeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // texturedCubeRadioButton
+            // 
+            this.texturedCubeRadioButton.AutoSize = true;
+            this.texturedCubeRadioButton.Location = new System.Drawing.Point(6, 52);
+            this.texturedCubeRadioButton.Name = "texturedCubeRadioButton";
+            this.texturedCubeRadioButton.Size = new System.Drawing.Size(135, 21);
+            this.texturedCubeRadioButton.TabIndex = 1;
+            this.texturedCubeRadioButton.Text = "Куб с текстурой";
+            this.texturedCubeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // simpleCubeRadioButton
+            // 
+            this.simpleCubeRadioButton.AutoSize = true;
+            this.simpleCubeRadioButton.Checked = true;
+            this.simpleCubeRadioButton.Location = new System.Drawing.Point(6, 25);
+            this.simpleCubeRadioButton.Name = "simpleCubeRadioButton";
+            this.simpleCubeRadioButton.Size = new System.Drawing.Size(110, 21);
+            this.simpleCubeRadioButton.TabIndex = 0;
+            this.simpleCubeRadioButton.TabStop = true;
+            this.simpleCubeRadioButton.Text = "Простой куб";
+            this.simpleCubeRadioButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 627);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -377,16 +452,18 @@
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -414,6 +491,12 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button exportButton;
         private System.Windows.Forms.Button importButton;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button drawBbutton;
+        private System.Windows.Forms.RadioButton plotRadioButton;
+        private System.Windows.Forms.RadioButton lightenCubeRadioButton;
+        private System.Windows.Forms.RadioButton texturedCubeRadioButton;
+        private System.Windows.Forms.RadioButton simpleCubeRadioButton;
     }
 }
 
