@@ -11,7 +11,7 @@ namespace Graphic3D
     /// Абстрактный класс модели. Все реальные фигуры (куб, тетрайдер и т. п.) должны наследоваться от этого класса
     /// </summary>
     [Serializable]
-    public class Model
+    public abstract class Model
     {
         /// <summary>
         /// Вершины фигуры

@@ -20,7 +20,7 @@ namespace Graphic3D
         {
             InitializeComponent();
             currentModels = new List<Model>();
-            currentModels.Add(new Cube(100));
+            currentModels.Add(new TexturedCube(150, Image.FromFile("Image.png")));
             Redraw();         
         }
 
@@ -37,9 +37,10 @@ namespace Graphic3D
             pictureBox1.Image = new Bitmap(600, 600);
             Graphics graphics = Graphics.FromImage(pictureBox1.Image);
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            DrawAxises();
             foreach (var model in currentModels)
                 model.Draw(graphics, Transformations.AxonometricProjection1());
-            DrawAxises();
+            
         }
 
         private void rotateButton_Click(object sender, EventArgs e)
