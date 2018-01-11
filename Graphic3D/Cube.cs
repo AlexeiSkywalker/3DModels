@@ -11,16 +11,16 @@ namespace Graphic3D
     {
         public Cube(double size)
         {
-            double s = size / 2;
+            double l = size / 2;
             vertices = new List<double[]>();
-            vertices.Add(new double[] { -s, -s, -s, 1 });
-            vertices.Add(new double[] { -s, s, -s, 1 });
-            vertices.Add(new double[] { s, s, -s, 1 });
-            vertices.Add(new double[] { s, -s, -s, 1 });
-            vertices.Add(new double[] { -s, -s, s, 1 });
-            vertices.Add(new double[] { -s, s, s, 1 });
-            vertices.Add(new double[] { s, s, s, 1 });
-            vertices.Add(new double[] { s, -s, s, 1 });
+            vertices.Add(new double[] { -l, -l, -l, 1 });
+            vertices.Add(new double[] { -l, l, -l, 1 });
+            vertices.Add(new double[] { l, l, -l, 1 });
+            vertices.Add(new double[] { l, -l, -l, 1 });
+            vertices.Add(new double[] { -l, -l, l, 1 });
+            vertices.Add(new double[] { -l, l, l, 1 });
+            vertices.Add(new double[] { l, l, l, 1 });
+            vertices.Add(new double[] { l, -l, l, 1 });
 
 
             indices = new List<int[]>();

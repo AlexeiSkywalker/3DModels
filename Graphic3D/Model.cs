@@ -7,11 +7,20 @@ using System.Threading.Tasks;
 
 namespace Graphic3D
 {
-    // Абстрактный класс модели. Все реальные фигуры (куб, тетрайдер и т. п.) должны наследоваться от этого класса
+    /// <summary>
+    /// Абстрактный класс модели. Все реальные фигуры (куб, тетрайдер и т. п.) должны наследоваться от этого класса
+    /// </summary>
     public abstract class Model
     {
-        public List<double[]> vertices { get; set; } // Вершины фигуры
-        public List<int[]> indices { get; set; } // Индексы вершин
+        /// <summary>
+        /// Вершины фигуры
+        /// </summary>
+        public List<double[]> vertices { get; set; }
+
+        /// <summary>
+        /// Индексы вершин
+        /// </summary>
+        public List<int[]> indices { get; set; }
 
         /// <summary>
         /// Применяет афинное преобразование
@@ -35,13 +44,19 @@ namespace Graphic3D
                 for (int j = 0; j < indices[i].Length; ++j)
                 {
                     var f1 = Multiply(vertices[indices[i][j]], projection);
-                    Point pt1 = new Point((int)f1[0] + 400, (int)f1[1] + 400);
+                    Point pt1 = new Point((int)f1[0] + 300, (int)f1[1] + 300);
                     var f2 = Multiply(vertices[indices[i][(j + 1) % indices[i].Length]], projection);
-                    Point pt2 = new Point((int)f2[0] + 400, (int)f2[1] + 400);
+                    Point pt2 = new Point((int)f2[0] + 300, (int)f2[1] + 300);
                     graphics.DrawLine(Pens.White, pt1, pt2);
                 }
         }
 
+        /// <summary>
+        /// Умножает вектор на матрицу
+        /// </summary>
+        /// <param name="vertex">Вектор</param>
+        /// <param name="matrix">Матрица</param>
+        /// <returns></returns>
         protected double[] Multiply(double[] vertex, double[,] matrix)
         {
             double[] result = new double[] {0, 0, 0, 0 };
