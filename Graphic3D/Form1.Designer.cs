@@ -46,6 +46,9 @@
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.importButton = new System.Windows.Forms.Button();
+            this.exportButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -58,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -327,11 +331,44 @@
             this.numericUpDown6.Size = new System.Drawing.Size(94, 26);
             this.numericUpDown6.TabIndex = 25;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.exportButton);
+            this.groupBox2.Controls.Add(this.importButton);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Location = new System.Drawing.Point(618, 162);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(271, 101);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Импорт и экспотр";
+            // 
+            // importButton
+            // 
+            this.importButton.Location = new System.Drawing.Point(6, 25);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(250, 30);
+            this.importButton.TabIndex = 0;
+            this.importButton.Text = "Импортировать из файла";
+            this.importButton.UseVisualStyleBackColor = true;
+            this.importButton.Click += new System.EventHandler(this.importButton_Click);
+            // 
+            // exportButton
+            // 
+            this.exportButton.Location = new System.Drawing.Point(6, 61);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(250, 30);
+            this.exportButton.TabIndex = 1;
+            this.exportButton.Text = "Экспорт в файл";
+            this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 627);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -349,6 +386,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -373,6 +411,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDown6;
         private System.Windows.Forms.NumericUpDown numericUpDown5;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button exportButton;
+        private System.Windows.Forms.Button importButton;
     }
 }
 

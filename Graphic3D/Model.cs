@@ -10,7 +10,8 @@ namespace Graphic3D
     /// <summary>
     /// Абстрактный класс модели. Все реальные фигуры (куб, тетрайдер и т. п.) должны наследоваться от этого класса
     /// </summary>
-    public abstract class Model
+    [Serializable]
+    public class Model
     {
         /// <summary>
         /// Вершины фигуры
@@ -26,7 +27,7 @@ namespace Graphic3D
         /// Применяет афинное преобразование
         /// </summary>
         /// <param name="transformation">Матрица преобразования</param>
-        public virtual void ApplyTransformation(double[,] transformation)
+        public void ApplyTransformation(double[,] transformation)
         {
             for (int i = 0; i < vertices.Count; ++i)
                 vertices[i] = Multiply(vertices[i], transformation);

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Graphic3D
 {
+    [Serializable]
     class Cube : Model
     {
         public Cube(double size)

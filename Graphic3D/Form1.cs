@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Graphic3D
 {
@@ -37,7 +39,7 @@ namespace Graphic3D
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             foreach (var model in currentModels)
                 model.Draw(graphics, Transformations.AxonometricProjection1());
-            //DrawAxises();
+            DrawAxises();
         }
 
         private void rotateButton_Click(object sender, EventArgs e)
@@ -64,13 +66,64 @@ namespace Graphic3D
             return angle / 180 * Math.PI;
         }
 
-        /*private void DrawAxises()
+        private void DrawAxises()
         {
             Graphics graphics = Graphics.FromImage(pictureBox1.Image);
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            graphics.DrawLine(Pens.Blue, new Point(300, 320), new Point(300, 0));
-            graphics.DrawLine(Pens.Red, new Point(300, 320), new Point(599, 599));
-            graphics.DrawLine(Pens.Green, new Point(300, 320), new Point(0, 599));
-        }*/
+            Point center = new Point(300, 300);
+            graphics.DrawLine(Pens.Blue, center, new Point(300, 0));
+            graphics.DrawLine(Pens.Red, center, new Point(599, 510));
+            graphics.DrawLine(Pens.Green, center, new Point(0, 510));
+        }
+
+        private void Serialize(Model serializableObject, string fileName)
+        {
+            if (serializableObject == null)
+                return;
+            Stream stream = File.Open(fileName, FileMode.Create);
+            BinaryFormatter bformatter = new BinaryFormatter();
+            bformatter.Serialize(stream, serializableObject);
+            stream.Close();
+        }
+
+        private Model Deserialize(string fileName)
+        {
+            Model res;
+            Stream stream = File.Open(fileName, FileMode.Open);
+            BinaryFormatter bformatter = new BinaryFormatter();
+            res = (Model)bformatter.Deserialize(stream);
+            stream.Close();
+            return res;
+        }
+
+        private void importButton_Click(object sender, EventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Multiselect = false,
+                Title = "Open Model File",
+                Filter = "Object File|*.obj;"
+            };
+            if (dialog.ShowDialog() != DialogResult.OK)
+                return;
+            currentModels.Clear();
+            currentModels.Add(Deserialize(dialog.FileName));
+            Redraw();
+
+        }
+
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            var dialog = new SaveFileDialog
+            {
+                FileName = "model.obj",
+                Title = "Save Model",
+                Filter = "Object File|*.obj;"
+            };
+            if (dialog.ShowDialog() != DialogResult.OK)
+                return;
+            Serialize(currentModels[0], dialog.FileName);
+            MessageBox.Show("Файл сохранён");
+        }
     }
 }
