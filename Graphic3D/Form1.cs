@@ -20,7 +20,7 @@ namespace Graphic3D
         {
             InitializeComponent();
             currentModels = new List<Model>();
-            currentModels.Add(new TexturedCube(150, Image.FromFile("Image.png")));
+            currentModels.Add(new TexturedCube(150, Image.FromFile("../../brickwork-texture.jpg")));
             Redraw();         
         }
 
